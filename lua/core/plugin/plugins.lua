@@ -16,6 +16,10 @@ return require('packer').startup(function(use)
 
     -- Theme
     use 'ellisonleao/gruvbox.nvim'
+    use {
+        'folke/todo-comments.nvim',
+        requires = {{ 'nvim-lua/plenary.nvim' }}
+    }
 
     -- Navigation
     use 'nvim-tree/nvim-tree.lua'
@@ -40,6 +44,10 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
     use 'windwp/nvim-autopairs'
+
+    -- Utilities
+    use 'akinsho/toggleterm.nvim'
+
 
     if packer_bootstrap then
         require('packer').sync()
