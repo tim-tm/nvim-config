@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = { 'lua_ls', 'clangd', 'cmake', 'jdtls', 'jsonls', 'texlab', 'marksman' }
+    ensure_installed = { 'lua_ls', 'clangd', 'cmake', 'rust_analyzer', 'jdtls', 'jsonls', 'texlab', 'marksman' }
 })
 
 local on_attach = function(_, buf)
