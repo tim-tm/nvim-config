@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
 
     -- Utilities
     use 'akinsho/toggleterm.nvim'
-
+    use 'andweeb/presence.nvim'
 
     if packer_bootstrap then
         require('packer').sync()
