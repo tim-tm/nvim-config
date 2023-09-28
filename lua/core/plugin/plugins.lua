@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
     use 'windwp/nvim-autopairs'
+    use 'simrat39/rust-tools.nvim'
 
     -- Utilities
     use 'akinsho/toggleterm.nvim'
