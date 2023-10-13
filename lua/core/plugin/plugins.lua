@@ -15,7 +15,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Theme
-    use 'ellisonleao/gruvbox.nvim'
+    -- use 'ellisonleao/gruvbox.nvim'
+    use 'sainnhe/gruvbox-material'
     use {
         'folke/todo-comments.nvim',
         requires = {{ 'nvim-lua/plenary.nvim' }}
