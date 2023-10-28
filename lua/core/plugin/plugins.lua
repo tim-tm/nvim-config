@@ -32,6 +32,11 @@ return require('packer').startup(function(use)
         tag = '0.1.3',
         requires = {{ 'nvim-lua/plenary.nvim' }}
     }
+    use {
+        'akinsho/bufferline.nvim',
+        tag = '*',
+        requires = 'nvim-tree/nvim-web-devicons'
+    }
 
     -- LSP
     use 'williamboman/mason.nvim'
