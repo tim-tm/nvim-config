@@ -35,7 +35,13 @@ return {
 
             lspconfig.clangd.setup {
                 on_attach = on_attach,
-                capabilities = capabilities
+                capabilities = capabilities,
+                cmd = {
+                    "clangd",
+                    "--background-index",
+                    "--clang-tidy",
+                    "--header-insertion=iwyu"
+                }
             }
 
             lspconfig.cmake.setup {
