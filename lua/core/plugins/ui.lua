@@ -64,7 +64,7 @@ return {
             { "<leader>fg", "<cmd>Telescope live_grep<CR>" },
             { "<leader>fb", "<cmd>Telescope buffers<CR>" },
             { "<leader>fh", "<cmd>Telescope help_tags<CR>" },
-            { "<leader>ftd", "<cmd>TodoTelescope<CR>" },
+            { "<leader>ftd", "<cmd>TodoTelescope <CR>" }
         }
     },
     {
@@ -78,4 +78,24 @@ return {
             }
         }
     },
+    {
+        "toppair/peek.nvim",
+        event = { "VeryLazy" },
+        build = "deno task --quiet build:fast",
+        config = function()
+            require("peek").setup({
+                auto_load = true,
+                close_on_bdelete = true,
+                syntax = true,
+                theme = "dark",
+                update_on_change = true,
+                app = "browser",
+                filetype = { "markdown" },
+                throttle_at = 200000,
+                throttle_time = "auto"
+            })
+            vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+            vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+        end
+    }
 }
