@@ -21,8 +21,7 @@ return {
             local lazy_status = require("lazy.status")
             require("lualine").setup({
                 options = {
-                    icons_enabled = true,
-                    theme = "gruvbox-material"
+                    theme = "mellow"
                 },
                 sections = {
                     lualine_a = {
@@ -71,12 +70,24 @@ return {
         "akinsho/bufferline.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         version = "*",
-        opts = {
-            options = {
-                mode = "tabs",
-                separator_style = "slant"
-            }
-        }
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require("bufferline").setup({
+                options = {
+                    mode = "buffers",
+                    diagnostics = "nvim_lsp",
+                    offsets = {
+                        {
+                            filetype = "NvimTree",
+                            text = "File Explorer",
+                            highlight = "Directory",
+                            separator = true
+                        }
+                    }
+                }
+            })
+            vim.keymap.set("n", "<leader>blp", ":BufferLinePick<CR>")
+        end
     },
     {
         "toppair/peek.nvim",
