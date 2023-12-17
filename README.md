@@ -1,7 +1,7 @@
 # nvim-config
 
 This is a simple nvim config, written in 100% lua, based on the tutorial series of [typecraft](https://www.youtube.com/@typecraft_dev).
-C/C++ development is what this config focuses on, have fun using or modifying it.
+C/C++ (and now a bit of web-) development is what this config focuses on, have fun using or modifying it.
 
 ## Installation
 

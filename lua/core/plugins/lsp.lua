@@ -8,7 +8,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         event = { "BufReadPre", "BufNewFile" },
         opts = {
-            ensure_installed = { "lua_ls", "clangd", "cmake", "rust_analyzer", "jdtls", "jsonls", "texlab", "marksman" }
+            ensure_installed = { "lua_ls", "clangd", "cmake", "rust_analyzer", "jdtls", "jsonls", "texlab", "marksman", "tsserver" }
         }
     },
     {
@@ -75,6 +75,11 @@ return {
             }
 
             lspconfig.glslls.setup {
+                on_attach = on_attach,
+                capabilities = capabilities
+            }
+
+            lspconfig.tsserver.setup {
                 on_attach = on_attach,
                 capabilities = capabilities
             }

@@ -43,7 +43,7 @@ return {
         event = { "BufReadPre", "BufNewFile" },
         config = function()
             require("nvim-treesitter.configs").setup({
-                ensure_installed = { "c", "cpp", "rust", "lua", "java", "bash", "cmake", "vim", "vimdoc", "query", "latex", "glsl" },
+                ensure_installed = { "c", "cpp", "rust", "lua", "java", "bash", "cmake", "vim", "vimdoc", "query", "latex", "glsl", "typescript" },
 
                 sync_install = false,
                 auto_install = true,
