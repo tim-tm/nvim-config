@@ -1,21 +1,20 @@
 return {
     {
-        "kvrohit/mellow.nvim",
+        "sainnhe/gruvbox-material",
         lazy = false,
         config = function()
-            vim.g.mellow_italic_comments = true
-            vim.g.mellow_italic_keywords = false
-            vim.g.mellow_italic_booleans = false
-            vim.g.mellow_italic_functions = false
-            vim.g.mellow_italic_variables = false
-            vim.g.mellow_bold_comments = false
-            vim.g.mellow_bold_keywords = true
-            vim.g.mellow_bold_booleans = false
-            vim.g.mellow_bold_functions = true
-            vim.g.mellow_bold_variables = false
-            vim.g.mellow_transparent = false
+            vim.o.termguicolors = true
+            vim.g.gruvbox_material_foreground = "mix"
+            vim.g.gruvbox_material_background = "hard"
+            vim.g.gruvbox_material_better_performance = 1
+            vim.g.gruvbox_material_enable_bold = 1
+            vim.g.gruvbox_material_enable_italic = 1
+            vim.g.gruvbox_material_ui_contrast = "high"
+            vim.g.gruvbox_material_diagnostic_text_highlight = 1
+            vim.g.gruvbox_material_diagnostic_line_highlight = 1
+            vim.g.gruvbox_material_disable_terminal_colors = 1
 
-            vim.cmd [[ colorscheme mellow ]]
+            vim.cmd [[ colorscheme gruvbox-material ]]
         end
     },
     {
