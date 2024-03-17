@@ -20,9 +20,9 @@ return {
         config = function()
             local lazy_status = require("lazy.status")
             require("lualine").setup({
-                options = {
-                    theme = "gruvbox-material"
-                },
+--              options = {
+--                  theme = "melange"
+--              },
                 sections = {
                     lualine_a = {
                         {
