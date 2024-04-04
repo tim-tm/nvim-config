@@ -6,10 +6,13 @@ return {
         config = true
     },
     {
-        "savq/melange-nvim",
+        "luisiacc/gruvbox-baby",
+        lazy = false,
+        setup = {},
         config = function ()
             vim.o.termguicolors = true
-            vim.cmd [[ colorscheme melange ]]
+            vim.g.gruvbox_baby_background_color = "dark"
+            vim.cmd [[ colorscheme gruvbox-baby ]]
         end
     }
 }
