@@ -32,6 +32,15 @@ return {
             workspace_text = "Working on %s",
             line_number_text = "Line %s out of %s",
         }
+    },
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+        opts = {}
     }
 }
 
